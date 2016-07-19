@@ -711,6 +711,8 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *
  * Keep this code block at the end of this file to take full effect.
  */
-# if (file_exists(__DIR__ . '/settings.local.php')) {
-#   include __DIR__ . '/settings.local.php';
-# }
+if (file_exists(__DIR__ . '/settings.local.php')) {
+  include __DIR__ . '/settings.local.php';
+}
+$settings['install_profile'] = 'minimal';
+$config_directories['sync'] = 'sites/default/files/config_dDb0k6BRzfr0y6uNns4g0GD2i5UjLoGAxpOs7yvEHaYOnz7DqT81VHcwOtTbm4c115HYsQGttA/sync';
