@@ -25,7 +25,8 @@
         "drupal/devel": "8.1.0-alpha1",
         "drupal/markdown": "8.1.0",
         "michelf/php-markdown": "^1.6",
-        "drupal/pathauto": "8.1.0-alpha3"
+        "drupal/pathauto": "8.1.0-alpha3",
+        "drupal/paragraphs": "8.1.0-rc5"
     },
     "require-dev": {
         "behat/mink": "~1.7",

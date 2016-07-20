@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b32649115db7c99b089e26b555a97a6",
-    "content-hash": "3daeead9b198f6c38bfc8c4714f41262",
+    "hash": "1f8e68b1fc5f4e0c244e5cee25db7ab5",
+    "content-hash": "4e05fc3e5b798e4e1a393c3834343fcf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1246,6 +1246,37 @@
             "time": "2016-06-23 14:14:07"
         },
         {
+            "name": "drupal/entity_reference_revisions",
+            "version": "8.1.0-rc7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_reference_revisions.git",
+                "reference": "09b19416018f59e1b1f4acef6cfd34496ba991ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.0-rc7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Adds a Entity Reference field type with revision support.",
+            "homepage": "https://www.drupal.org/project/entity_reference_revisions",
+            "time": "2016-05-26 00:06:06"
+        },
+        {
             "name": "drupal/markdown",
             "version": "8.1.0",
             "source": {
@@ -1275,6 +1306,55 @@
             "description": "Allows content to be submitted using Markdown, a simple plain-text syntax that is transformed into valid HTML.",
             "homepage": "http://drupal.org/project/markdown",
             "time": "2016-02-04 01:39:10"
+        },
+        {
+            "name": "drupal/paragraphs",
+            "version": "8.1.0-rc5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/paragraphs",
+                "reference": "bed1bddffdf03626ba057ab697635b049d8d98de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.0-rc5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/entity_reference_revisions": "8.*"
+            },
+            "replace": {
+                "drupal/paragraphs_demo": "self.version",
+                "drupal/paragraphs_type_permissions": "self.version"
+            },
+            "suggest": {
+                "drupal/block": "Required by drupal/paragraphs_demo",
+                "drupal/content_translation": "Required by drupal/paragraphs_demo",
+                "drupal/core": "Required by drupal/paragraphs_demo, drupal/paragraphs_type_permissions",
+                "drupal/field": "Required by drupal/paragraphs_demo",
+                "drupal/field_ui": "Required by drupal/paragraphs_demo",
+                "drupal/image": "Required by drupal/paragraphs_demo",
+                "drupal/language": "Required by drupal/paragraphs_demo",
+                "drupal/node": "Required by drupal/paragraphs_demo",
+                "drupal/search_api": "Required by drupal/paragraphs_demo",
+                "drupal/search_api_db": "Required by drupal/paragraphs_demo",
+                "drupal/views": "Required by drupal/paragraphs_demo"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Enables the creation of paragraphs entities. To safely uninstall, go first to Structure > Paragraphs types > Settings.",
+            "homepage": "https://www.drupal.org/project/paragraphs",
+            "time": "2016-05-31 19:59:20"
         },
         {
             "name": "drupal/pathauto",
