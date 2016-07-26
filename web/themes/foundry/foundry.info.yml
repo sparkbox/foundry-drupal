@@ -1,0 +1,16 @@
+name: foundry
+type: theme
+description: Sparkbox Foundry
+package: Other
+core: 8.x
+libraries:
+  - foundry/global-styling
+
+base theme: stable
+
+regions:
+  header: Header
+  menu: Top Menu
+  messages: Messages
+  content: Content
+  footer: Footer
