@@ -143,3 +143,12 @@ function foundry_theme_suggestions_details_alter(array &$suggestions, array $var
 function foundry_preprocess_menu_local_task(array &$variables) {
   //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
 }
+
+function foundry_preprocess_image(array &$variables) {
+  if (isset($variables['attributes']['width'])) {
+    unset($variables['attributes']['width']);
+  }
+  if (isset($variables['attributes']['height'])) {
+    unset($variables['attributes']['height']);
+  }
+}
