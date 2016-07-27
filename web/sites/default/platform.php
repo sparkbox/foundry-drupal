@@ -22,3 +22,5 @@ foreach ($relationships['database'] as $endpoint) {
   );
 }
 
+$settings['hash_salt'] = getenv("HASH_SALT");
+
