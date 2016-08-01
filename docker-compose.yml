@@ -1,0 +1,63 @@
+# From https://github.com/Wodby/docker4drupal
+version: "2"
+
+services:
+  mariadb:
+    image: wodby/drupal-mariadb
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+    volumes:
+      - ./docker-runtime/mariadb:/var/lib/mysql
+#      - ./docker-runtime/mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
+
+  php:
+    image: wodby/drupal-php:7.0 # Allowed: 7.0, 5.6.
+    environment:
+      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
+      PHP_XDEBUG_ENABLED: 1 # Set 1 to enable.
+    volumes:
+      - ./:/var/www/html
+
+  nginx:
+    image: wodby/drupal-nginx
+    environment:
+      NGINX_UPSTREAM_NAME: php
+      NGINX_DOCROOT: web # Relative path inside the /var/www/html/ directory.
+      DRUPAL_VERSION: 8 # Allowed: 7, 8.
+    volumes_from:
+      - php
+    ports:
+      - "8000:80"
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mariadb
+      PMA_USER: drupal
+      PMA_PASSWORD: drupal
+      PHP_UPLOAD_MAX_FILESIZE: 1G
+      PHP_MAX_INPUT_VARS: 1G
+    ports:
+     - "8001:80"
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8002:8025"
+
+#  redis:
+#    image: redis:3.2-alpine
+
+#  memcached:
+#    image: memcached:1.4-alpine
+
+#  solr:
+#    image: solr:5.5-alpine
+#    volumes:
+#      - ./docker-runtime/solr:/opt/solr/server/solr/mycores
+#    ports:
+#      - "8003:8983"
