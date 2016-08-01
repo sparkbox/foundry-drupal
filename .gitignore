@@ -10,8 +10,8 @@ web/profiles/contrib
 web/sites/*/files
 
 # Ignore configuration files that may contain sensitive information
-web/sites/*/settings*.php
-web/sites/*/services*.yml
+web/sites/*/settings.*.php
+web/sites/*/services.*.yml
 
 # Docker
 docker-runtime
