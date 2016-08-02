@@ -24,3 +24,5 @@ foreach ($relationships['database'] as $endpoint) {
 
 $settings['hash_salt'] = getenv("HASH_SALT");
 
+$config['system.logging']['error_level'] = 'verbose';
+
