@@ -285,7 +285,7 @@ $config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = '5GjbwD-hB5xTUtIp-3O2kehoYfH9z4sA2TdKw7oJlBaW35d9gpaEmhLGJVIpFA5YTeiKsZMOOQ';
 
 /**
  * Deployment identifier.
