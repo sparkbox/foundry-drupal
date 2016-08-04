@@ -1,0 +1,23 @@
+uuid: ed200d63-3e9a-4c7e-b9a9-32405a6aa8d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_bleed
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.field_full_bleed
+field_name: field_full_bleed
+entity_type: paragraph
+bundle: image
+label: 'Full Bleed'
+description: 'If enabled, this element will include a background band that spans to the edges of the browser.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Full Bleed'
+  off_label: 'No Bleed'
+field_type: boolean

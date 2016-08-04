@@ -1,0 +1,29 @@
+uuid: ac75d264-926e-4457-9c89-5416c3da540b
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - foundry
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: foundry_page_title
+theme: foundry
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

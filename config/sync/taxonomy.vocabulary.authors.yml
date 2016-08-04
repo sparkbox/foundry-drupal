@@ -1,0 +1,9 @@
+uuid: 85f7bc2f-2972-43a1-9133-ff64aa76f903
+langcode: en
+status: true
+dependencies: {  }
+name: Authors
+vid: authors
+description: 'Foundry Authors'
+hierarchy: 0
+weight: 0

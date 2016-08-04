@@ -1,17 +1,17 @@
-uuid: d1628bf8-ff8c-49f6-b131-3e9a040b5bee
+uuid: 4144f4f9-7280-4bbf-975a-3a35f14c2cc7
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - user
   theme:
-    - seven
+    - foundry
 _core:
   default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
-id: seven_login
-theme: seven
-region: header
-weight: -3
+id: foundry_login
+theme: foundry
+region: '-1'
+weight: 0
 provider: null
 plugin: user_login_block
 settings:

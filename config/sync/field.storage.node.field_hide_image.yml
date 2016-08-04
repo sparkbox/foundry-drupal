@@ -1,0 +1,18 @@
+uuid: cca8457f-f88c-4485-9f8d-7495702f1dcd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_hide_image
+field_name: field_hide_image
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
