@@ -4,18 +4,22 @@ This is a proof-of-concept build of the Foundry on Drupal 8 for research purpose
 
 ## Requirements
 
-- Install the latest version of [Docker}(https://docs.docker.com/engine/installation/) 
+- Install the latest version of [Docker}(https://docs.docker.com/engine/installation/)  
 for installing a local environment.
 - Install [Composer](https://getcomposer.org/) with Homebrew: `brew install composer`
+- Install [Platform.sh CLI](https://docs.platform.sh/user_guide/overview/cli/index.html)  
+tool: `curl -sS https://platform.sh/cli/installer | php`
+- Run `platform` once to authenticate (see credentials in 1Password)
+- Add your public key with the command `platform ssh-key:add`
 
 ## Setup
 
 1. Clone the repository and `cd` into the root of the repo
 2. Run `composer install` to install all Drupal dependencies
-3. Run `./script/setup.sh` to configure your local environment
-4. Run `docker-compose up -d` to initialize a local environment
-5. Get a copy of a recent database dump and import via [phpMyAdmin](http://localhost:8001)
-6. View the site at: http://localhost:8000
+3. Run `docker-compose up -d` to initialize a local environment
+4. Run `./script/setup.sh` to configure your local environment
+5. Run `./scripts/sync.sh` to sync data and files to your local environment
+5. View the site at: http://localhost:8000
 
 ## Docker
 
