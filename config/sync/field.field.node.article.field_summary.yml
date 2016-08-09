@@ -1,0 +1,21 @@
+uuid: fb9bfff3-1467-40e6-a479-717e53b76e1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.article
+  module:
+    - text
+id: node.article.field_summary
+field_name: field_summary
+entity_type: node
+bundle: article
+label: Summary
+description: 'The summary will appear on listing pages and at the top of detail pages'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
