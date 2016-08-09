@@ -6,6 +6,10 @@ name: php
 
 # The runtime the application uses.
 type: "php:7.0"
+# Additional extensions
+runtime:
+    extensions:
+        - redis
 
 # Configuration of the build of this application.
 build:
@@ -27,7 +31,7 @@ dependencies:
 relationships:
     database: "mysql:mysql"
 #    solr: "solr:solr"
-#    redis: "redis:redis"
+    redis: "rediscache:redis"
 
 # The configuration of app when it is exposed to the web.
 web:
