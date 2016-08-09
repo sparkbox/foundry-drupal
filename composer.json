@@ -27,7 +27,8 @@
         "michelf/php-markdown": "^1.6",
         "drupal/pathauto": "8.1.0-alpha3",
         "drupal/paragraphs": "8.1.0-rc5",
-        "symfony/yaml": "2.8.6"
+        "symfony/yaml": "2.8.6",
+        "drupal/redis": "8.1.0-alpha1"
     },
     "require-dev": {
         "behat/mink": "~1.7",
