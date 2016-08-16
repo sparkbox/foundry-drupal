@@ -70,41 +70,28 @@
  *   in different view modes.
  */
 #}
-<section{{ attributes }} class="foundry-article--entry">
-
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if page %}
-    <header class="foundry-article--header">
-      <div class="layout--foundry-container">
-        <h1 class="foundry-article--title">{{ label }}</h1>
-        <div class="foundry-article--meta">
-          <p class="foundry-article--meta-item foundry-article--date">Posted {{ date }}</p>
-          <p class="foundry-article--meta-item foundry-article--author">
+<article{{ attributes }} class="foundry--article">
+  <a href="{{ url }}" title="{{ label }}" class="foundry--thumb-link" data-src="{{ file_url(node.field_featured_image.entity.fileuri) }}">
+    <img class="foundry--thumb" src="{{ file_url(node.field_featured_image.entity.fileuri) }}" alt="node.field_featured_image.alt">
+  </a>
+  <header class="foundry--header">
+    <h1 class="foundry--title">
+      <a href="{{ url }}" class="foundry--link">{{ label }}</a>
+    </h1>
+    <p class="foundry--meta">
+      <span class="foundry-article--meta-item foundry-article--date">Posted {{ date }}</span>
+          <span class="foundry-article--meta-item foundry-article--author">
             by
-            <a href="/foundry/author/emily_gray" class="foundry-article--meta-link foundry-article--author-link">Emily Gray</a>
 
-          </p>
-        </div>
-      </div>
-    </header>
-  {% endif %}
+            {{ content.field_author }}
 
-  <div class="layout--foundry-container">
+          </span>
 
-    <article class="foundry-article--content js-foundry-article--content reading-style--full-article">
-
-      {{ content.field_paragraphs }}
-
-    </article>
-
+    </p>
+  </header>
+  <div class="foundry--summary">
+    <div class="foundry--summary-body">
+      {{ content.field_summary }}
+    </div>
   </div>
-
-
-</section>
+</article>

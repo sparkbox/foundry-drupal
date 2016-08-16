@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Theme override for a view template to display a list of rows.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the container.
+ * - rows: A list of rows for this list.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's contents.
+ * - title: The title of this group of rows. May be empty.
+ * - list: @todo.
+ *   - type: Starting tag will be either a ul or ol.
+ *   - attributes: HTML attributes for the list element.
+ *
+ * @see template_preprocess_views_view_list()
+ */
+#}
+{%
+  set classes = [
+    'layout--layer-above-nav',
+    'layout--container',
+    'layout--vertical-space-2x',
+    'site-main',
+    'js-site-main'
+  ]
+%}
+
+
+{% if view.getCurrentPage() == 0 %}
+  <div class="featured--entry">
+    <div class="layout--layer-above-nav layout--container">
+      <div class="featured--item">
+        {{ rows.0.content }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<div{{ attributes.addClass(classes) }}>
+
+  <div class="foundry--container">
+
+    <ul class="foundry--entries">
+
+      {% for key,row in rows %}
+
+        {% if view.getCurrentPage() == 0 and key > 0 %}
+          <li class="foundry--item">{{ row.content }}</li>
+        {% endif %}
+
+      {% endfor %}
+
+    </ul>
+
+  </div>
+
+</div>
