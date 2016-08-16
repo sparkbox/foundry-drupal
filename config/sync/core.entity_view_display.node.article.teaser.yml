@@ -5,8 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
+    - field.field.node.article.field_author
+    - field.field.node.article.field_featured_image
+    - field.field.node.article.field_hide_image
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_summary
     - node.type.article
   module:
+    - image
     - text
     - user
 id: node.article.teaser
@@ -14,13 +20,33 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
-  body:
+  field_author:
+    type: entity_reference_entity_view
+    weight: 1
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+  field_featured_image:
+    type: image
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_summary:
+    type: text_default
+    weight: 6
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
   links:
-    weight: 100
-hidden: {  }
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_hide_image: true
+  field_paragraphs: true
