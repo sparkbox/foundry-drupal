@@ -277,9 +277,8 @@ display:
       style:
         type: rss
         options:
-          description: ''
-          grouping: {  }
           uses_fields: false
+          description: 'Sparkbox is a web agency in Dayton, Ohio'
       row:
         type: node_rss
         options:

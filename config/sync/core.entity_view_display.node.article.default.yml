@@ -66,4 +66,6 @@ content:
     type: text_default
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

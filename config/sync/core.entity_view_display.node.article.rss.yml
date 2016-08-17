@@ -1,0 +1,44 @@
+uuid: d4318a11-13ca-4135-be3c-d31134fb560a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.article.body
+    - field.field.node.article.field_author
+    - field.field.node.article.field_featured_image
+    - field.field.node.article.field_hide_image
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_summary
+    - node.type.article
+  module:
+    - entity_reference_revisions
+    - image
+    - user
+id: node.article.rss
+targetEntityType: node
+bundle: article
+mode: rss
+content:
+  field_featured_image:
+    weight: 103
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_author: true
+  field_hide_image: true
+  field_summary: true
+  links: true

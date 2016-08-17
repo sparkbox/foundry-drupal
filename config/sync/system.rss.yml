@@ -1,8 +1,8 @@
 channel:
-  description: ''
+  description: 'Sparkbox is a web agency in Dayton, Ohio with a philosophy of making a better web.'
 items:
   limit: 10
-  view_mode: rss
+  view_mode: fulltext
 langcode: en
 _core:
   default_config_hash: TlH7NNk46phfxu1mSUfwg1C0YqaGsUCeD4l9JQnQlDU
