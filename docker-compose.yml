@@ -49,8 +49,8 @@ services:
     ports:
       - "8002:8025"
 
-#  redis:
-#    image: redis:3.2-alpine
+  redis:
+    image: redis:3.2-alpine
 
 #  memcached:
 #    image: memcached:1.4-alpine

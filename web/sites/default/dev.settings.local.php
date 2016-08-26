@@ -34,3 +34,12 @@ $databases['default']['default'] = array (
 
 $settings['hash_salt'] = '5GjbwD-hB5xTUtIp-3O2kehoYfH9z4sA2TdKw7oJlBaW35d9gpaEmhLGJVIpFA5YTeiKsZMOOQ';
 
+
+// Set redis configuration.
+$conf['redis_client_host'] = 'redis';
+$conf['redis_client_interface'] = 'PhpRedis';
+$conf['lock_inc'] = 'sites/all/modules/contrib/redis/redis.lock.inc';
+$conf['path_inc'] = 'sites/all/modules/contrib/redis/redis.path.inc';
+$conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
+$conf['cache_default_class'] = 'Redis_Cache';
+$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
