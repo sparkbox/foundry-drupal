@@ -1,0 +1,15 @@
+uuid: bfc453e9-0b84-4796-aee5-b0158222c017
+langcode: en
+status: true
+dependencies: {  }
+name: 'Full HTML'
+format: full_html
+weight: 0
+filters:
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
