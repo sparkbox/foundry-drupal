@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "71c572a91c9664b0aa89b50a7381ac71",
-    "content-hash": "d00ef74e5037bd57e036122c2f1cfa8a",
+    "hash": "f3ef1266096b973d902aab1d38f78e7c",
+    "content-hash": "9699782fa34c9b8d4efc8cd245fad14e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1498,6 +1498,39 @@
             "description": "Provides a mechanism for modules to automatically generate aliases for the content they manage.",
             "homepage": "https://www.drupal.org/project/pathauto",
             "time": "2016-04-18 18:44:27"
+        },
+        {
+            "name": "drupal/redirect",
+            "version": "8.1.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/redirect",
+                "reference": "f88e28a5033d2a9952929faff6fa59764583b80c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/redirect-8.x-1.0-alpha1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/link": "8.*",
+                "drupal/views": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Allows users to redirect from old URLs to new URLs.",
+            "homepage": "https://www.drupal.org/project/redirect",
+            "time": "2016-03-25 13:39:45"
         },
         {
             "name": "drupal/redis",
